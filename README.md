@@ -9,11 +9,11 @@
     {  return 1; }
  <br> <br>
 ### 2.서버 소켓 생성 <br>
-TCP<br>
+#### TCP<br>
 
     SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); 
     //AF_INET = IPv4 주소 체계 
-UDP<br>
+#### UDP<br>
 
     SOCKET sock=socket(AF_INET,SOCK_DGRAM,0);
  <br> <br>
@@ -36,10 +36,10 @@ UDP<br>
     gethostbyaddr((const char*)&addr,sizeof(addr),AF_INET);// IPv4 주소->도메인 이름 <br>
  <br> <br>
 ###  7.Server-Client <br>
-TCP<br>
+#### TCP<br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 -> listen() -> accept() -> recv():데이터 수신함수 -> send():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> connect():소켓 구조체를 서버의 원격 IP주소,포트번호로 초기화 -> send() -> recv() -> closesocket() <br>
-UDP<br>
+#### UDP<br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 ->  recvfrom():데이터 수신함수 -> sendto():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> sendto() -> recvfrom() -> closesocket() or socket() ->connect() -> send() -> recv() -> closesocket() <br>
 ###  8.Thread <br>
