@@ -10,7 +10,7 @@
  <br> <br>
 ### 2.서버 소켓 생성 <br>
     SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); 
-//AF_INET = IPv4 주소 체계 <br>
+    //AF_INET = IPv4 주소 체계 <br>
  <br> <br>
 ### 3.클라이언트와 연결(통신) 후 파일 디스크립터(I/O리소스 식별 정수) 반환 <br>
     client_sock = accept(listen_sock, (struct sockaddr *)&clientaddr, &addrlen);
