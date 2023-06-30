@@ -42,3 +42,5 @@ WINAPI:함수 호출 규약 __stdcall 를 따른다.<br>
 SYSTEM_INFO:하드웨어 및 운영체제에 대한 정보<br>
 LPVOID:long pointer<br>
 CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이즈=0(기본크기),스레드 함수 시작 주소,전달할 인수(arg<포인터크기 ? 주소: data),제어 값,스레드ID )<br>
+(2)우선순위 변경:SetThreadPriority(우선순위 변경),GetThreadPriority(우선순위 레벨반환)<br>
+(3)스레드 종료(동기화):WaitForSingleObject(특정 스레드 종료까지 대기),WaitForSingleObject(여러 스레드(배열에 저장) 종료 대기)<br>
