@@ -43,7 +43,7 @@
 (1)Server:socket()->bind():소켓에 local IP주소 할당 ->  recvfrom():데이터 수신함수 -> sendto():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> sendto() -> recvfrom() -> closesocket() or socket() ->connect() -> send() -> recv() -> closesocket() <br>
 
-
+<br><br>
 ###  8.Thread <br>
 (1)Windows API 데이터 타입<br>
 HANDLE:운영체제의 리소스를 가리키는 포인터<br>
