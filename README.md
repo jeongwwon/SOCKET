@@ -42,6 +42,8 @@
 #### UDP<br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 ->  recvfrom():데이터 수신함수 -> sendto():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> sendto() -> recvfrom() -> closesocket() or socket() ->connect() -> send() -> recv() -> closesocket() <br>
+
+
 ###  8.Thread <br>
 (1)Windows API 데이터 타입<br>
 HANDLE:운영체제의 리소스를 가리키는 포인터<br>
@@ -57,7 +59,7 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 (6)Event(동기화 객체):임계영역 만으로 어떤 스레드가 먼저 자원에 접근했는지 알수 가 없다.이벤트는 사건 발생을 다른 스레드에 알리는 동기화 기법이다.
 
     bool SetEvent(HANDLE hEvent);// 비신호상태 -> 신호상태
-    bool ResetEvent(HANDLE hEvent);// 신호상태 -> 비신호상태<br><br>
+    bool ResetEvent(HANDLE hEvent);// 신호상태 -> 비신호상태
 ### 9.UDP
 (1)비연결형 프로토콜<br>
 (2)일대일,일대다통신<br>
