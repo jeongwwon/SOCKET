@@ -47,4 +47,9 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 (5)Critical Section(임계영역):두 스레드가 공유자원에 접근할때 하나의 스레드의 접근을 허용한다. 동기화 객체와 달리 개별 프로세스의 **사용자 메모리 영역**에 존재하는 단순한 구조체다. 즉, 한 프로세스에 속한 스레드 간의 동기화에만 사용된다<br><br>
 (6)Event(동기화 객체):임계영역 만으로 어떤 스레드가 먼저 자원에 접근했는지 알수 가 없다.이벤트는 사건 발생을 다른 스레드에 알리는 동기화 기법이다.
     bool SetEvent(HANDLE hEvent);// 비신호상태 -> 신호상태
-    bool ResetEvent(HANDLE hEvent);// 신호상태 -> 비신호상태
+    bool ResetEvent(HANDLE hEvent);// 신호상태 -> 비신호상태<br><br>
+### 9.UDP
+(1)비연결형 프로토콜<br>
+(2)일대일,일대다통신<br>
+(3)신뢰성 없는 데이터 전송:데이터 재전송 X<br>
+(4)데이터 경계 구분<br>
