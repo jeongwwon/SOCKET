@@ -29,7 +29,7 @@ const char *inet_ntop(int af, const void *src, char *dst, socklen_t size) //Pres
  <br> <br>
 ###  6.DNS <br>
 gethostbyname(name) //  도메인 이름 -> IPv4주소  <br>
-gethistbyaddr((const char*)&addr,sizeof(addr),AF_INET);// IPv4 주소->도메인 이름 <br>
+gethostbyaddr((const char*)&addr,sizeof(addr),AF_INET);// IPv4 주소->도메인 이름 <br>
  <br> <br>
 ###  7.Server-Client <br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 -> listen() -> accept() -> recv():데이터 수신함수 -> send():데이터 전송함수->closesocket() 종료   <br>
