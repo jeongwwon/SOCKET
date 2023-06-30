@@ -1,4 +1,4 @@
-# Headings SOCKET 프로그래밍
+#  SOCKET 프로그래밍
 
 소켓 구조체(IPv4)-struct sockaddr _in addr;  <br>
 구성- sin_family(주소 체계),sin_port(포트 번호),sin_addr(IP주소),sin_zero(패딩)
