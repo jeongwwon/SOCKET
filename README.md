@@ -42,6 +42,8 @@
 #### UDP<br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 ->  recvfrom():데이터 수신함수 -> sendto():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> sendto() -> recvfrom() -> closesocket() or socket() ->connect() -> send() -> recv() -> closesocket() <br>
+주의!<br>
+recvfrom() 함수에 사용하는 소켓은 반드시 지역주소가 결정되어야한다. bind(),sendto() {바인드 default} 와 같은 함수가 선행되어야한다. 
 
 <br><br>
 ###  8.Thread <br>
