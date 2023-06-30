@@ -5,7 +5,8 @@
 <br><br>
 ### 1.소켓 초기화 <br>
     WSADATA wsa; 
-    <br>if(WSAStartup(MAKEWORD(2,2),&wsa)!=0){ <br> return 1; <br> }
+    if(WSAStartup(MAKEWORD(2,2),&wsa)!=0)
+    {  return 1; }
  <br> <br>
 ### 2.서버 소켓 생성 <br>
 SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); <br>
