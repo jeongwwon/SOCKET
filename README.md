@@ -9,22 +9,22 @@
     {  return 1; }
  <br> <br>
 ### 2.서버 소켓 생성 <br>
-    SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); <br>
+    SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); 
 //AF_INET = IPv4 주소 체계 <br>
  <br> <br>
 ### 3.클라이언트와 연결(통신) 후 파일 디스크립터(I/O리소스 식별 정수) 반환 <br>
-    client_sock = accept(listen_sock, (struct sockaddr *)&clientaddr, &addrlen); <br>
+    client_sock = accept(listen_sock, (struct sockaddr *)&clientaddr, &addrlen);
  <br> <br>
 
 ###  4. 네트워크 바이트 정렬(호스트-라우터 IP주소의 바이트 상호약속) <br>
-    u_short htons(u_short hostshort);//host-to-network-short; <br>
-    u_long htonl(u_short hostshort);//host-to-network-short; <br>
-    u_short ntohs(u_short hostshort);//network-to-host-short; <br>
-    u_long ntohl(u_short hostshort);//network-to-host-long; <br>
+    u_short htons(u_short hostshort);//host-to-network-short; 
+    u_long htonl(u_short hostshort);//host-to-network-short; 
+    u_short ntohs(u_short hostshort);//network-to-host-short; 
+    u_long ntohl(u_short hostshort);//network-to-host-long;
  <br> <br>
 ###  5.IP주소 변환 함수 <br>
-    int inet_pton(int af, const char *src, void *dst) //Network Format(이진 형식) 변환 <br>
-    const char *inet_ntop(int af, const void *src, char *dst, socklen_t size) //Presentation Format(텍스트 형식)으로 변환 <br>
+    int inet_pton(int af, const char *src, void *dst) //Network Format(이진 형식) 변환 
+    const char *inet_ntop(int af, const void *src, char *dst, socklen_t size) //Presentation Format(텍스트 형식)으로 변환
  <br> <br>
 ###  6.DNS <br>
     gethostbyname(name) //  도메인 이름 -> IPv4주소  <br>
