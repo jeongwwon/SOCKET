@@ -33,7 +33,7 @@ gethistbyaddr((const char*)&addr,sizeof(addr),AF_INET);// IPv4 주소->도메인
  <br> <br>
 ###  7.Server-Client <br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 -> listen() -> accept() -> recv():데이터 수신함수 -> send():데이터 전송함수->closesocket() 종료   <br>
-(2)Client:socket() -> connect():소켓 구조체를 서버의 원격 IP주소,포트번호로 초기화 -> send() -> recv() -> closesocket() <br>
+(2)Client:socket() -> connect():소켓 구조체를 서버의 원격 IP주소,포트번호로 초기화 -> send() -> recv() -> closesocket() <br> <br>
 ###  8.Thread <br>
 (1)Windows API 데이터 타입<br>
 HANDLE:운영체제의 리소스를 가리키는 포인터<br>
