@@ -3,11 +3,8 @@
 소켓 구조체(IPv4)-struct sockaddr _in addr;  <br>
 구성- sin_family(주소 체계),sin_port(포트 번호),sin_addr(IP주소),sin_zero(패딩)
 <br><br>
-### 1.소켓 초기화 <br> 
-WSADATA wsa; <br>
-if(WSAStartup(MAKEWORD(2,2),&wsa)!=0){ <br>
-return 1; <br>
-}
+### 1.소켓 초기화 <br>
+# Code Blocks WSADATA wsa; <br>if(WSAStartup(MAKEWORD(2,2),&wsa)!=0){ <br> return 1; <br> }
  <br> <br>
 ### 2.서버 소켓 생성 <br>
 SOCKET listen_sock =socket(AF_INET, SOCK_STREAM, 0); <br>
