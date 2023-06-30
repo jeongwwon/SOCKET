@@ -1,3 +1,4 @@
 C:\Users\1\Desktop\Client2\x64\Debug\Client2.exe
 C:\Users\1\Desktop\C++\SOCKET\Fixed_Client\x64\Debug\Client2.exe
 C:\Users\1\Desktop\SOCKET\Client\x64\Debug\Client2.exe
+C:\Users\1\Desktop\소켓프로그래밍\Client\x64\Debug\Client2.exe
