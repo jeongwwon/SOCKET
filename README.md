@@ -34,3 +34,11 @@ gethistbyaddr((const char*)&addr,sizeof(addr),AF_INET);// IPv4 주소->도메인
 ###  7.Server-Client <br>
 (1)Server:socket()->bind():소켓에 local IP주소 할당 -> listen() -> accept() -> recv():데이터 수신함수 -> send():데이터 전송함수->closesocket() 종료   <br>
 (2)Client:socket() -> connect():소켓 구조체를 서버의 원격 IP주소,포트번호로 초기화 -> send() -> recv() -> closesocket() <br>
+###  8.Thread <br>
+(1)Windows API 데이터 타입<br>
+HANDLE:운영체제의 리소스를 가리키는 포인터<br>
+DWORD:Windows API에서 함수의 매개변수나 반환값,Unsigned 정수<br>
+WINAPI:함수 호출 규약 __stdcall 를 따른다.<br>
+SYSTEM_INFO:하드웨어 및 운영체제에 대한 정보<br>
+LPVOID:long pointer<br>
+CreateThread(핸들상속,보안디스크립터=NULL,스택 사이즈=0(기본크기),스레드 함수 시작 주소,전달할 인수(arg<포인터크기 ? 주소: data),제어 값,스레드ID )<br>
