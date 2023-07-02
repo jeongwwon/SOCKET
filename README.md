@@ -81,6 +81,12 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 
     getsocket(SOCKET sock,int level,int optname,char *optval,int optlen)
 
+<br>
+(1)SO_BROADCAST:only UDP 소켓에만 사용<br>
+(2)SO_KEEPALIVE:only TCP 프로토콜<br>
+(3)SO_LINGER:only TCP 소켓,소켓 송신 버퍼에 미전송 데이터 있을시 closesocket 리턴 시간 제어<br>
+(4)SO_SNDBUF,SO_RCVBUF:송신 버퍼,수신 버퍼 크기 설정
+
 ![20230702_111735_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/cb162650-975f-43c9-8814-df7991ca863a)
 ![20230702_111958_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/035a8f7e-c218-4885-af8c-6a7683077cf0)
 
