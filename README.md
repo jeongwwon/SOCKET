@@ -1,6 +1,6 @@
 #  SOCKET 프로그래밍
 
-소켓 구조체(IPv4)-struct sockaddr _in addr;  <br>
+소켓 구조체(IPv4)-struct sockaddr_in addr;  <br>
 구성- sin_family(주소 체계),sin_port(포트 번호),sin_addr(IP주소),sin_zero(패딩)
 <br><br>
 ### 1.소켓 초기화 <br>
@@ -67,3 +67,18 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 (2)일대일,일대다통신<br>
 (3)신뢰성 없는 데이터 전송:데이터 재전송 X<br>
 (4)데이터 경계 구분<br>
+(5)BroadCasting:네트워크상 모든 호스트에게 데이터를 보냄,IPv4만 가능,<br>
+    DWORD bEnable=1;
+    setsocket(sock,SOL_SOCKET,SO_BROADCAST,(const char*)&bEnable,sizeof(bEnable));
+
+(5)-1 네트워크 브로드캐스트:호스트ID가 모두 1인경우<br>
+(5)-2 서브넷 브로드캐스트:서브넷ID를 제외한 호스트ID가 모두 1인경우<br>
+(5)-3 지역 브로드캐스트:네트워크ID,호스트ID가 모두 1인경우(IPv4주소 255.255.255.255),송신자 자신이 속한 네트워크에 대한 브로드 캐스팅<br>
+(6)MultiCasting:특정 그룹에 속한 호스트에게 호스트들 에게만 데이터를 보냄<br>
+<br><br>
+### 10.소켓 옵션
+요구사항에 따른 응용프로그램 작성시 소켓 코드,프로토콜 구현 코드의 동작이 달라져야 할 경우가 있다.<br>
+    getsocket(SOCKET sock,int level,int optname,char *optval,int optlen)
+![20230702_111735_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/cb162650-975f-43c9-8814-df7991ca863a)
+![20230702_111958_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/035a8f7e-c218-4885-af8c-6a7683077cf0)
+
