@@ -78,7 +78,9 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 <br><br>
 ### 10.소켓 옵션
 요구사항에 따른 응용프로그램 작성시 소켓 코드,프로토콜 구현 코드의 동작이 달라져야 할 경우가 있다.<br>
+
     getsocket(SOCKET sock,int level,int optname,char *optval,int optlen)
+<br>
 ![20230702_111735_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/cb162650-975f-43c9-8814-df7991ca863a)
 ![20230702_111958_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/035a8f7e-c218-4885-af8c-6a7683077cf0)
 
