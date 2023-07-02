@@ -91,3 +91,14 @@ CreateThread:CreateThread(핸들상속,보안디스크립터=NULL,스택 사이�
 ![20230702_111735_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/cb162650-975f-43c9-8814-df7991ca863a)
 ![20230702_111958_(1)](https://github.com/jeongwwon/SOCKET/assets/104192273/035a8f7e-c218-4885-af8c-6a7683077cf0)
 
+<br><br>
+### 11.GUI
+Message:윈도우 운영체제가 응용프로그램 외부,내부에 변화가 생김을 해당 응용프로그램에 알림<br>
+(1)메세지 처리 절차: 이벤트 발생 -> 운영체제가 관리하는 시스템 메시지큐에 정보 저장 -> 응용프로그램 메시지 큐에 전송 <br>
+(2)Window procedure: Message Handler(메시지 처리 동작)의 집합<br>
+    WinMain()// GUI 응용 프로그램 실행 시작점 == main()
+    WNDCLASS wndclass; // 윈도우 클래스 등록
+    CreateWindow() // 윈도우 생성후 핸들 리턴
+    MSG msg; // GetMessage() -> TranslateMessage(&msg) -> DispatchMessage(&msg) 메세지 루프
+    LRESULT CALLBACK WndProc(HWND hWnd,UINT uMsg,WPARAM wParam,LPARAM lparam) // 윈도우 프로시저
+    
